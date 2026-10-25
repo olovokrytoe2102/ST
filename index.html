@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#015fcc" />
+    <meta
+      name="description"
+      content="STELLARE: Twitch, Telegram, Discord, Steam, донат и разработка игры — все каналы в одном меню."
+    />
+    <title>STELLARE — CHANNEL SELECT</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <video
+        class="stage__video"
+        src="background.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      ></video>
+      <div class="stage__veil" aria-hidden="true"></div>
+
+      <header class="hud">
+        <span class="hud__status"><i aria-hidden="true"></i>ONLINE</span>
+      </header>
+
+      <div class="counter" aria-hidden="true">
+        <span class="counter__num">01</span>
+      </div>
+
+      <section class="deck" aria-label="Каналы STELLARE">
+        <div class="deck__head" aria-hidden="true">
+          <span>SELECT CHANNEL</span>
+          <span><b>06</b> LINKS</span>
+        </div>
+
+        <nav class="channel-menu">
+          <!-- 01. Twitch -->
+          <div
+            class="entry is-active"
+            data-layer="2"
+            data-hint="Смотреть прямые трансляции"
+            style="--angle: -5deg; --dx: -10px; --dy: 0px; --scale: 0.98; --order: 0; --push-dir: 0; z-index: 30"
+          >
+            <a
+              id="channel-0"
+              class="entry__hit"
+              href="https://www.twitch.tv/stellare_twitch"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="0"
+              aria-label="Twitch"
+            >
+              <span class="entry__plate" aria-hidden="true"></span>
+              <span class="entry__glass" aria-hidden="true"></span>
+              <span class="entry__line"><span class="entry__label">Twitch</span></span>
+              <span class="entry__ripples" aria-hidden="true"></span>
+              <span class="entry__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- 02. Telegram -->
+          <div
+            class="entry"
+            data-layer="1"
+            data-hint="Новости и обновления"
+            style="--angle: -2deg; --dx: -34px; --dy: 6px; --scale: 0.92; --order: 1; --push-dir: 0; z-index: 1"
+          >
+            <a
+              id="channel-1"
+              class="entry__hit"
+              href="https://t.me/stellare_st"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              aria-label="Telegram"
+            >
+              <span class="entry__plate" aria-hidden="true"></span>
+              <span class="entry__glass" aria-hidden="true"></span>
+              <span class="entry__line"><span class="entry__label">Telegram</span></span>
+              <span class="entry__ripples" aria-hidden="true"></span>
+              <span class="entry__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- 03. Discord -->
+          <div
+            class="entry"
+            data-layer="2"
+            data-hint="Чат и голосовые комнаты"
+            style="--angle: 2.4deg; --dx: -4px; --dy: 0px; --scale: 0.94; --order: 2; --push-dir: 0; z-index: 2"
+          >
+            <a
+              id="channel-2"
+              class="entry__hit"
+              href="https://www.donationalerts.com/gateway/trampoline/dalinksocialswidgetsocial/123543/url?signature=4cff62d07c16912cef8ebb00a41dbce96dd54ae99cb13fe0f214fe057dfc5967"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              aria-label="Discord"
+            >
+              <span class="entry__plate" aria-hidden="true"></span>
+              <span class="entry__glass" aria-hidden="true"></span>
+              <span class="entry__line"><span class="entry__label">Discord</span></span>
+              <span class="entry__ripples" aria-hidden="true"></span>
+              <span class="entry__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- 04. Steam -->
+          <div
+            class="entry"
+            data-layer="1"
+            data-hint="Профиль и библиотека игр"
+            style="--angle: -3deg; --dx: -40px; --dy: 7px; --scale: 0.9; --order: 3; --push-dir: 0; z-index: 1"
+          >
+            <a
+              id="channel-3"
+              class="entry__hit"
+              href="https://steamcommunity.com/id/stellare_st/"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              aria-label="Steam"
+            >
+              <span class="entry__plate" aria-hidden="true"></span>
+              <span class="entry__glass" aria-hidden="true"></span>
+              <span class="entry__line"><span class="entry__label">Steam</span></span>
+              <span class="entry__ripples" aria-hidden="true"></span>
+              <span class="entry__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- 05. Донат -->
+          <div
+            class="entry"
+            data-layer="2"
+            data-hint="Поддержать проект"
+            style="--angle: 1.6deg; --dx: 2px; --dy: 0px; --scale: 0.99; --order: 4; --push-dir: 0; z-index: 2"
+          >
+            <a
+              id="channel-4"
+              class="entry__hit"
+              href="https://dalink.to/stellare_st"
+              target="_blank"
+              rel="noopener noreferrer"
+              tabindex="-1"
+              aria-label="Донат"
+            >
+              <span class="entry__plate" aria-hidden="true"></span>
+              <span class="entry__glass" aria-hidden="true"></span>
+              <span class="entry__line"><span class="entry__label">Донат</span></span>
+              <span class="entry__ripples" aria-hidden="true"></span>
+              <span class="entry__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <!-- 06. Разработка игры (пока без ссылки) -->
+          <div
+            class="entry has-badge"
+            data-layer="3"
+            data-hint="Проект в разработке — уже скоро"
+            style="--angle: -2.2deg; --dx: -14px; --dy: 4px; --scale: 0.54; --order: 5; --push-dir: 0; z-index: 3"
+          >
+            <button
+              id="channel-5"
+              class="entry__hit"
+              type="button"
+              tabindex="-1"
+              aria-label="Разработка игры — скоро"
+            >
+              <span class="entry__plate" aria-hidden="true"></span>
+              <span class="entry__glass" aria-hidden="true"></span>
+              <span class="entry__line">
+                <span class="entry__label">Разработка игры</span>
+                <span class="entry__badge">СКОРО</span>
+              </span>
+              <span class="entry__ripples" aria-hidden="true"></span>
+            </button>
+          </div>
+        </nav>
+      </section>
+
+      <footer class="command">
+        <div class="command__hint-wrap">
+          <p class="command__hint">Смотреть прямые трансляции</p>
+        </div>
+
+        <div class="command__rule"><span>COMMAND</span></div>
+
+        <div class="command__keys">
+          <span><kbd>↑</kbd><kbd>↓</kbd> выбор</span>
+          <span><kbd>ENTER</kbd> открыть</span>
+        </div>
+      </footer>
+
+      <div class="notice" role="status" aria-live="polite"></div>
+
+      <p class="whisper" aria-hidden="true">Арбузные акулы везде</p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
